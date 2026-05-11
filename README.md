@@ -1,5 +1,18 @@
 # Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 环境配置
+- 开发环境（默认）：`VITE_API_BASE_URL=http://172.16.0.85:30563`
+- 测试环境（mode=test）：`VITE_API_BASE_URL=http://172.16.0.85:30563`
+- 生产环境：`VITE_API_BASE_URL=https://cloud.zdxwx.com`
+- 统一模块前缀：`VITE_API_MODULE=/yjzhddxt-backend`
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 请求封装
+- 请求实例：`src/utils/request.ts`
+- 统一 API 出口：`src/api/index.ts`
+- 特性：统一 `baseURL`、超时、Token 注入、业务错误提示、网络错误提示
+
+## 启动命令
+- 开发：`pnpm dev`
+- 测试模式开发：`pnpm dev:test`
+- 生产构建：`pnpm build`
+- 测试构建：`pnpm build:test`

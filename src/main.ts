@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+import "virtual:uno.css";
 import "./style.css";
 import App from "@/App.vue";
 import ElementPlus from "element-plus";
@@ -7,6 +8,8 @@ import { createPinia } from "pinia";
 import router from "./router";
 
 const app = createApp(App);
+
+document.documentElement.setAttribute("data-theme", "blue");
 
 app.use(createPinia());
 app.use(router);
